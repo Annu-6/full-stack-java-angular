@@ -1,0 +1,26 @@
+<!-- <p>list-todos works!</p> -->
+<BR>
+<h1 style="text-indent: 3em;">My Todo's!</h1>
+<div class="container">
+    <table class="table">
+        <!-- <caption>My Todo's</caption> -->
+        <thead>
+            <tr>
+                <th>description</th>
+                <th>Target Date</th>
+                <th>Is Completed?</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- for (Todo todo: todos) { -->
+            <tr *ngFor="let todo of todos">
+                <td>{{todo.description}}</td>
+                <!-- Angular pipe are used to convert one field in one format to another format -->
+                <td>{{todo.targetDate | date | lowercase | uppercase}}</td>
+                <td>{{todo.done}}</td>
+            </tr>
+            <!-- } -->
+        </tbody>
+    </table>
+</div>
